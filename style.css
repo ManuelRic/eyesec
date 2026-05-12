@@ -55,35 +55,6 @@ canvas {
     display: block;
 }
 
-#dark-filter {
-    position: fixed;
-    inset: 0;
-    background:
-    radial-gradient(circle at 50% 42%, rgba(77, 243, 255, 0.12), transparent 28%),
-    linear-gradient(
-        90deg,
-        rgba(5, 7, 13, 0.78),
-        rgba(5, 7, 13, 0.38),
-        rgba(5, 7, 13, 0.86)
-    ),
-    rgba(0, 0, 0, 0.38);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.noise {
-    position: fixed;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    opacity: 0.065;
-    background-image:
-    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
-    background-size: 44px 44px;
-    mask-image: radial-gradient(circle at center, black, transparent 75%);
-}
-
 .site {
     position: relative;
     z-index: 3;
@@ -94,18 +65,17 @@ canvas {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 20;
+    z-index: 4;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 18px clamp(20px, 5vw, 72px);
     backdrop-filter: blur(18px);
-    background:
-    linear-gradient(
-        to bottom,
-        rgba(5, 7, 13, 0.84),
-        rgba(5, 7, 13, 0.34)
-    );
+    background: rgba(5, 8, 22, 0.72);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(120, 220, 255, 0.12);
+        
+    
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -250,7 +220,7 @@ canvas {
     border-radius: 999px;
     border: 1px solid var(--line);
     background: rgba(255, 255, 255, 0.06);
-    color: var(--muted);
+    color: var(--text);
     font-size: 0.86rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -290,10 +260,10 @@ canvas {
     background:
     linear-gradient(
         90deg,
-        #ffffff 0%,
-        #c8fbff 28%,
-        #4df3ff 56%,
-        #a66cff 100%
+        #e8f6f8 0%,
+        #1096a0 28%,
+        #4862d8 56%,
+        #0f1296 100%
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -303,7 +273,7 @@ canvas {
 
 .hero-copy {
     max-width: 680px;
-    color: var(--muted);
+    color: var(--text);
     font-size: clamp(1rem, 1.8vw, 1.26rem);
     line-height: 1.75;
 }
@@ -363,7 +333,7 @@ canvas {
     justify-content: center;
     gap: 8px;
 
-    color: #ff6b81;
+    color: #faf3f4;
 
     font-size: 0.78rem;
     font-weight: 700;
@@ -388,11 +358,11 @@ canvas {
 
     border-radius: 999px;
 
-    background: #ff4d7d;
+    background: #ff2222;
 
     box-shadow:
-    0 0 12px #ff4d7d,
-    0 0 24px rgba(255, 77, 125, 0.6);
+    0 0 12px #ff2222,
+    0 0 24px #ff2222;
 
     animation: livePulse 1s infinite;
 }

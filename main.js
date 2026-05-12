@@ -7,6 +7,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 // -----------------------------
 
 const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x050816);
 
 // -----------------------------
 // CAMERA
@@ -72,43 +73,14 @@ function resizeBackground() {
     backgroundMesh.geometry = new THREE.PlaneGeometry(planeWidth, planeHeight);
 }
 
-textureLoader.load('./imgs/fog_forest2.jpg', function (texture) {
-    const backgroundGeometry = new THREE.PlaneGeometry(1, 1);
-
-    const backgroundMaterial = new THREE.MeshBasicMaterial({
-    map: texture,
-    color: 0xffffff,
-    depthWrite: false,
-    depthTest: false
-    });
-
-    backgroundMesh = new THREE.Mesh(backgroundGeometry, backgroundMaterial);
-
-    backgroundMesh.renderOrder = -10;
-    backgroundMesh.position.copy(camera.position);
-    backgroundMesh.position.z -= backgroundDistance;
-
-    scene.add(backgroundMesh);
-
-    resizeBackground();
-});
-
 // -----------------------------
 // LIGHTS
 // -----------------------------
-
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.82);
-scene.add(ambientLight);
-
-const directionalLight = new THREE.DirectionalLight(0xffffff, 3.2);
-directionalLight.position.set(5, 5, 5);
-scene.add(directionalLight);
-
-const accentLight = new THREE.PointLight(0x4df3ff, 3, 10);
+const accentLight = new THREE.PointLight(0xffffff, 30, 10, 2);
 accentLight.position.set(-2.8, 1.5, 2.8);
 scene.add(accentLight);
 
-const violetLight = new THREE.PointLight(0xa66cff, 2.6, 10);
+const violetLight = new THREE.PointLight(0xa66cff, 90, 10, 2);
 violetLight.position.set(2.8, -1.2, 2.6);
 scene.add(violetLight);
 
@@ -121,10 +93,12 @@ const loader = new GLTFLoader();
 let eyeball = null;
 let mixer = null;
 
-const normalScale = 0.4;
+const normalScale = 1;
+const eyePivot = new THREE.Group();
+scene.add(eyePivot);
 
 loader.load(
-    './models/realistic_human_eye.glb',
+    './models/fog_eye.glb',
 
     function (gltf) {
     eyeball = gltf.scene;
@@ -132,7 +106,7 @@ loader.load(
     eyeball.position.set(0, 0, 0);
     eyeball.scale.set(normalScale, normalScale, normalScale);
 
-    scene.add(eyeball);
+    eyePivot.add(eyeball);
 
     console.log('Eyeball loaded:', eyeball);
     console.log('Animations found:', gltf.animations);
@@ -354,7 +328,7 @@ function animate() {
 
     const margin = 0.9;
 
-    eyeball.position.set(
+    eyePivot.position.set(
         THREE.MathUtils.clamp(
         finalX,
         bounds.minX + margin,
@@ -374,7 +348,7 @@ function animate() {
         2
     );
 
-    eyeball.lookAt(target);
+    eyePivot.lookAt(target);
     }
 
     renderer.render(scene, camera);
