@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>EYE SEE YOU | Cybersecurity Intelligence</title>
+
+  
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.165/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165/examples/jsm/"
+    }
+  }
+  </script>
+
+
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="icon" type="image/png" href="./imgs/logo_aimLock.png">
+</head>
+
+<body>
+  <div id="dark-filter"></div>
+  <div class="noise"></div>
+
+  <div class="site">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="brand">
+        <img id="logo" src="./imgs/logo_aimLock.png">
+        <span >EyeSec</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#mainTitle">Home</a>
+        <a href="#services">Services</a>
+        <a href="#platform">Platform</a>
+        <a href="#threats">Threats</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="nav-cta" href="#contact">Request Audit</a>
+    </nav>
+
+    <main>
+      <section class="hero" id="mainTitle">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">
+              Continuous threat visibility
+            </div>
+
+            <h1 class="hero-title">
+              <span class="gradient-text">EYE SEE YOU</span>
+            </h1>
+
+            <p class="hero-copy">
+              A premium cybersecurity intelligence site concept built around real-time monitoring,
+              attack-surface visibility, and proactive defense. The interactive eye follows user
+              movement to reinforce the idea of constant vigilance.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn" href="#services">Explore Protection</a>
+              <a class="btn btn-secondary" href="#platform">View Capabilities</a>
+            </div>
+          </div>
+
+          <aside class="status-panel" aria-label="Security status panel">
+            <div class="panel-header">
+              <div class="panel-title">Threat Monitor</div>
+              <div class="live-badge">LIVE</div>
+            </div>
+
+            <div class="metric">
+              <span>External exposure</span>
+              <strong>Low</strong>
+              <div class="risk-bar"><div style="--value: 26%"></div></div>
+            </div>
+
+            <div class="metric">
+              <span>Endpoint posture</span>
+              <strong>96%</strong>
+              <div class="risk-bar"><div style="--value: 96%"></div></div>
+            </div>
+
+            <div class="metric">
+              <span>Identity risk</span>
+              <strong>Moderate</strong>
+              <div class="risk-bar"><div style="--value: 48%"></div></div>
+            </div>
+
+            <div class="metric">
+              <span>Response readiness</span>
+              <strong>High</strong>
+              <div class="risk-bar"><div style="--value: 88%"></div></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="section-head">
+          <div class="section-kicker">Security Services</div>
+          <h2><span class="text_highlight">Defend</span> every layer of your digital perimeter.</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-fingerprint-pattern-icon lucide-fingerprint-pattern"><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"/><path d="M14 13.12c0 2.38 0 6.38-1 8.88"/><path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"/><path d="M2 12a10 10 0 0 1 18-6"/><path d="M2 16h.01"/><path d="M21.8 16c.2-2 .131-5.354 0-6"/><path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"/><path d="M8.65 22c.21-.66.45-1.32.57-2"/><path d="M9 6.8a6 6 0 0 1 9 5.2v2"/></svg>
+            </div>
+            <h3>Attack Surface Monitoring</h3>
+            <p>
+              Map exposed assets, misconfigurations, leaked credentials, shadow IT,
+              and vulnerable services before attackers exploit them.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-alert-icon lucide-shield-alert"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+            </div>
+            <h3>Threat Detection</h3>
+            <p>
+              Analyze suspicious behavior across cloud, endpoints, identity systems,
+              and networks with signal-rich monitoring pipelines.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap-icon lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+            </div>
+            <h3>Incident Response</h3>
+            <p>
+              Contain intrusions, preserve evidence, eradicate persistence, and restore
+              operations with a clear post-incident roadmap.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="platform">
+        <div class="split">
+          <div>
+            <div class="section-kicker">Platform</div>
+            <h2>Visibility that feels alive.</h2>
+            <p class="section-copy" style="margin-top: 22px;">
+              Combine human expertise with automated detection logic. This layout is designed
+              for a modern cybersecurity brand, SOC dashboard, security startup, or portfolio project.
+            </p>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="check">✓</div>
+              <div>
+                <strong>Real-time telemetry</strong>
+                <p class="section-copy">
+                  Visualize signals from endpoints, cloud accounts, network events,
+                  and identity providers.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="check">✓</div>
+              <div>
+                <strong>Prioritized risk</strong>
+                <p class="section-copy">
+                  Reduce noise by ranking issues according to exploitability,
+                  business impact, and exposure.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="check">✓</div>
+              <div>
+                <strong>Guided remediation</strong>
+                <p class="section-copy">
+                  Turn alerts into clear next steps for IT, engineering, compliance,
+                  and executive teams.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="threats">
+        <div class="section-head">
+          <div class="section-kicker">Threat Intelligence</div>
+          <h2>From signal to response in <span class="text_highlight">seconds</span>.</h2>
+        </div>
+
+        <div class="split">
+          <div class="terminal">
+            <div class="terminal-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="terminal-body">
+              <div><span class="muted">$</span> scan --surface external</div>
+              <div>found: 18 assets</div>
+              <div>exposed: 2 services</div>
+              <div>severity: medium</div>
+              <br />
+              <div><span class="muted">$</span> identity --risk elevated</div>
+              <div>flagged: impossible-travel event</div>
+              <div>action: require step-up verification</div>
+              <br />
+              <div><span class="muted">$</span> response --status ready</div>
+              <div>playbooks: loaded</div>
+              <div>containment: available</div>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>24/7</strong>
+              <span>Monitoring across critical systems.</span>
+            </div>
+
+            <div class="stat">
+              <strong>360°</strong>
+              <span>Visibility across exposure, identity, and endpoints.</span>
+            </div>
+
+            <div class="stat">
+              <strong>&lt;5m</strong>
+              <span>Target time from alert to triage.</span>
+            </div>
+
+            <div class="stat">
+              <strong>Zero</strong>
+              <span>Trust-first approach to access decisions.</span>
+            </div>
+
+            <div class="stat">
+              <strong>99.9%</strong>
+              <span>Protection uptime across monitored infrastructure.</span>
+            </div>
+
+            <div class="stat">
+              <strong>1,200+</strong>
+              <span>Threat indicators analyzed every second.</span>
+            </div>
+
+            <div class="stat">
+              <strong>A.I.</strong>
+              <span>Machine-assisted detection with human analyst oversight.</span>
+            </div>
+
+            <div class="stat">
+              <strong>256-bit</strong>
+              <span>Enterprise-grade encryption securing sensitive data.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="cta">
+        <div>
+          <h2>Ready to <span class="text_highlight">see</span> what attackers see?</h2>
+          <p>
+            Use this section for a contact form, booking link, or security assessment CTA.
+            The Three.js eye remains active behind the site as an immersive brand signature.
+          </p>
+        </div>
+
+        <a class="btn" href="mailto:security@example.com">
+          Start Security Review
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <div>© 2026 EyeSec Intelligence. All rights reserved.</div>
+      <div>Built with Three.js, GLB animation, mouse tracking, and layered HTML.</div>
+    </footer>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
